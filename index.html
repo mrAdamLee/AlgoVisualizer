@@ -5,12 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="sorts.js"></script>
+    <link rel="stylesheet" href="css/stylesheet.css">
     <title>Document</title>
 </head>
 <body>
-    <p>What up</p>
-    <div id="blocks">
-        
+    <div id="arrayselect">
+        <form class="arrayselector" onsubmit="generateRandArr()">
+            <label for="quantity">Number of nums to sort(min 2): </label>
+            <input type="number" id="arrLen" class="arrayselector" name="quantity" min="2">
+            <label for="range">Enter a range of nums for the array: </label>
+            <input type="number" id="arrRange" class="arrayselector" name="range">
+            <input type="submit">
+        </form>
+    </div>
+
+    <div class="bbl-sort" id="bbl-sort-div">
+       
     </div>
 </body>
 </html>

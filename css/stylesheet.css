@@ -1,0 +1,11 @@
+#bubblesort {
+    display: block;
+}
+.arrayselector{
+    display: block;    
+    margin-top: 0em;
+}
+#bbl-sort-div{
+    border: 5px solid black;
+}
+

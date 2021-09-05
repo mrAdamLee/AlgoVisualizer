@@ -23,18 +23,36 @@ function bubbleSort(arr){
     
     return arr;
 }
+function selectionSort(arr){
+    for(let i = 0; i < arr.length - 1; i++){
+        let minIdx = i
+        for(let j = i + 1; j < arr.length; j++){
+            if(arr[j] < arr[minIdx]) {
+                minIdx = j;
+            }
+        }
+        [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]];
+    }
+    console.log(arr);
+}
 
 // do{
 //     bubbleSort(unsortedArr);
 // } while(swapped === true );
 
-function generateRandArr(range, size){
+function generateRandArr(){
+    let size = document.getElementById("arrLen").value;
+    let range = document.getElementById("arrRange").value;
+    
     //generates an array of a designated size with a random set of numbers within a designated range.
     arr = []
     for(let i = 0; i < size; i++){
         let rndInt = Math.floor(Math.random() * range) + 1;
         arr.push(rndInt);
     }  
-    return arr; 
+    let bubdiv = document.getElementById("bbl-sort-div");
+    let node = document.createTextNode(arr);
+    bubdiv.appendChild(node);
+    return false;
 }
 
